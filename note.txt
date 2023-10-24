@@ -1,0 +1,21 @@
+express
+nodemon --save-dev
+mongoose
+
+
+schema provides a structure for documents on the database 
+for a goal to be created you need to proviode a title and a description 
+goal- created 
+title ==string, required
+description == string, required
+progree == number 0 
+
+
+CRUD
+Create Read Update Delete
+
+//build schemas
+find ({name: "moses"})
+findbyid({_id})
+findbyidandupdate({_id:id}, req.body, {new: true, run vali})
+findbyidanddelete({_id: id})
