@@ -4,11 +4,14 @@ const Schema = mongoose.Schema
 const goalSchema = new Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        trim: true,
     },
     description: {
         type: String,
         required :true,
+        trim: true,
     },
     progress: {
         type: Number,
