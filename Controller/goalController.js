@@ -7,8 +7,8 @@ const getAllGoals = async (req,res) => {
     res.status(200).json({succes: true, goals })
 };
 const getSingleGoal = async (req,res) => {
-   const {goalId} =req.params
-   const goal=await Goals.findById({_id: goalId})
+   const {goalId} = req.params
+   const goal = await Goals.findById({_id: goalId})
    if(!goal) {
     return res.status(404).json({success: false,});
    }
@@ -49,7 +49,7 @@ const deleteGoal = async (req,res) => {
    const {goalId} = req.params
    try {
     const goal = await Goals.findByIdAndDelete({_id: goalId });
-    res.status(200).json({sucess: true, goal})
+    res.status(200).json({success: true, goal}) 
    } catch (error) {
     res.json(error)
     console.log(error)
